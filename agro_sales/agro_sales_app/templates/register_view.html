@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register View</title>
+</head>
+<body>
+<h1 align="center">Registered User Details</h1>
+<hr>
+
+<table border="1">
+  <tr style="background-color:red;color:white">
+
+    <td>Name</td>
+    <td>City</td>
+    <td>Address</td>
+    <td>Contact</td>
+    <td>Email</td>
+    <td>Action</td>
+  </tr>
+    {% for r in userdata %}
+  <tr>
+      <td>{{r.name}}</td>
+      <td>{{r.city}}</td>
+      <td>{{r.address}}</td>
+      <td>{{r.contact}}</td>
+      <td>{{r.email}}</td>
+      <td><a href="{% url 'register_edit' r.id %}">edit </a></td>
+  </tr>
+    {% endfor %}
+</table>
+<p> <a href="{% url 'index'%}">Home Page </a></p>
+</body>
+</html>

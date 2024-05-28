@@ -1,0 +1,55 @@
+<nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top px-4 px-lg-5 py-lg-0"
+    >
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0 text-white">
+          <i class="fa fa-crop text-warning me-3"></i>Agro Crop Sales and Disease Soln
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-3 py-lg-0">
+          <a href="{% url 'admin_home' %}" class="nav-item nav-link active">Home</a>
+
+
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Apmc</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="{% url 'addapmc' %}" class="dropdown-item">Add</a>
+              <a href="{% url 'apmc_view' %}" class="dropdown-item">View</a>
+
+            </div>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Market Price</a
+            >
+            <div class="dropdown-menu bg-light m-0">
+              <a href="{% url 'addmarketprice' %}" class="dropdown-item">Add</a>
+              <a href="{% url 'marketprice_view' %}" class="dropdown-item">View</a>
+
+            </div>
+          </div>
+
+
+
+          <a href="{% url 'index' %}" class="nav-item nav-link">Logout</a>
+        </div>
+      </div>
+    </nav>
